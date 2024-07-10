@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.padding-x {
+  @apply sm:px-[1.5rem] md:px-[2rem] lg:px-[2.5rem] px-[2rem];
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.padding-y {
+  @apply sm:py-[1rem] py-[0.5rem];
+}
+
+.radius {
+  @apply rounded-[7px];
+}
+
+.bg-color {
+  @apply bg-[#2042B6];
+}
+
+.bg-secondary {
+  @apply bg-gray-300;
+}
+
+.sidebar-wrapper {
+  @apply fixed  rounded-bl-xl rounded-br-xl sm:rounded-br-none shadow px-3 padding-y top-0 z-50 bg-white text-black right-0 w-[100%] sm:w-[40%] md:w-[30%] h-[50%] flex flex-col invisible transition-all overflow-hidden;
+}
+
+.show {
+  @apply visible z-50;
+}
+
+.grid-class {
+  @apply grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-3;
 }
