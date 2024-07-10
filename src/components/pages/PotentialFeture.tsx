@@ -1,6 +1,7 @@
 import React from 'react';
 import PageTitle from '../PageTitle';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface LogosProps {
   id: number;
@@ -31,7 +32,7 @@ const PotentialFeture = () => {
         doloremque esse.
       </p>
 
-      <div className=' w-full grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-3'>
+      <div className={cn(' grid-class w-full md:grid-cols-3')}>
         {logos?.map((data) => (
           <div
             key={data.id}

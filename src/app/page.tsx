@@ -179,7 +179,7 @@ const Home = () => {
       <Container className=' bg-transparent padding-x'>
         <PageTitle title='Stories & Ideas' />
         <p className=' text-sm'>The latest news and updates</p>
-        <div className=' grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-3'>
+        <div className='grid-class'>
           {storyAndIdeas?.map((data) => (
             <Container
               key={data.id}
@@ -240,7 +240,7 @@ const Home = () => {
         <PageTitle title='Selected WPPOOL Portfolio Companies' />
         <section
           className={cn(
-            'grid-class grid-cols-1 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+            'grid-class lg:grid-cols-4 xl:grid-cols-5 md:grid-cols-3'
           )}
         >
           {portfolioData?.map((data) => (
