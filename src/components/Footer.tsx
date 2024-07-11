@@ -34,7 +34,7 @@ const footerInfo: FooterInfo[] = [
 ];
 const Footer = () => {
   return (
-    <footer className=' padding-x padding-y flex flex-col sm:flex-row justify-around gap-7 bg-secondary h-[70vh]'>
+    <footer className=' padding-x padding-y flex flex-col sm:flex-row justify-around gap-7 bg-secondary'>
       <div className=' flex flex-col justify-between w-[40%]'>
         <h3 className=' text-2xl'>
           Experience remarkable WordPress products with a new level of power,

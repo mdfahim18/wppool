@@ -21,7 +21,7 @@ const generateRandomData = (
     for (let j = 0; j < numDays; j++) {
       const date = new Date(start);
       date.setDate(start.getDate() + j);
-      const value = Math.floor(Math.random() * 10) + 1; // Values between 1 and 10 for clearer separation
+      const value = Math.floor(Math.random() * 10) + 1;
       lineData.push({ date, value });
     }
     data.push(lineData);
@@ -36,7 +36,7 @@ const BollingerBandsChart: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = generateRandomData('2023-01-01', 10, 6); // 6 lines with 10 data points each
+      const data = generateRandomData('2023-01-01', 10, 6);
       setDataPoints(data);
     };
 
